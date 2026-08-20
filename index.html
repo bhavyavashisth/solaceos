@@ -22,13 +22,28 @@
         <div class="desktop-glow glow-one"></div>
         <div class="desktop-glow glow-two"></div>
         <p class="desktop-label">Solace OS</p>
-        <div class="dock-space" aria-label="Dock placeholder"></div>
+        <nav class="dock" aria-label="Application dock">
+          <div class="dock-group">
+            <button class="dock-app finder" type="button" aria-label="Files" data-app="files"><span>⌘</span><b></b></button>
+            <button class="dock-app notes" type="button" aria-label="Notes" data-app="notes"><span>≡</span><b></b></button>
+            <button class="dock-app terminal" type="button" aria-label="Terminal" data-app="terminal"><span>›_</span><b></b></button>
+          </div>
+          <div class="dock-divider" aria-hidden="true"></div>
+          <output id="dock-clock" class="dock-clock" aria-label="Current time"></output>
+          <div class="dock-divider" aria-hidden="true"></div>
+          <div class="dock-group">
+            <button class="dock-app camera" type="button" aria-label="Camera" data-app="camera"><span>◉</span><b></b></button>
+            <button class="dock-app settings" type="button" aria-label="Settings" data-app="settings"><span>⚙</span><b></b></button>
+            <button class="dock-app trash" type="button" aria-label="Recycle Bin" data-app="trash"><span>♲</span><b></b></button>
+          </div>
+        </nav>
       </section>
     </main>
 
     <script src="js/core/state.js"></script>
     <script src="js/core/Desktop.js"></script>
     <script src="js/core/Boot.js"></script>
+    <script src="js/core/Taskbar.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>

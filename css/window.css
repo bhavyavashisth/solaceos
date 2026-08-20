@@ -1,0 +1,54 @@
+.window {
+  background: rgb(243 246 252 / .92);
+  border: 1px solid rgb(255 255 255 / .58);
+  border-radius: 14px;
+  box-shadow: 0 24px 50px rgb(7 12 31 / .38), 0 3px 10px rgb(5 7 16 / .17);
+  color: #172033;
+  height: 440px;
+  min-height: 230px;
+  min-width: 320px;
+  overflow: hidden;
+  position: absolute;
+  resize: none;
+  touch-action: none;
+  width: 580px;
+  z-index: 4;
+}
+
+.window.is-focused { box-shadow: 0 29px 56px rgb(7 12 31 / .52), 0 0 0 1px rgb(255 255 255 / .26); }
+.window.is-minimized { display: none; }
+.window.is-maximized { border-radius: 0; height: calc(100vh - 16px) !important; left: 8px !important; top: 8px !important; width: calc(100vw - 16px) !important; }
+
+.window-bar {
+  align-items: center;
+  background: linear-gradient(180deg, #fbfcff, #e5eaf4);
+  border-bottom: 1px solid #d4d9e4;
+  cursor: default;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  height: 39px;
+  padding: 0 13px;
+  user-select: none;
+}
+
+.window-controls { display: flex; gap: 7px; }
+.window-control { border: 1px solid rgb(0 0 0 / .11); border-radius: 50%; cursor: pointer; height: 12px; padding: 0; width: 12px; }
+.window-control.close { background: #fa5f57; }
+.window-control.minimize { background: #f6bd3a; }
+.window-control.maximize { background: #4bc96a; }
+.window-control:focus-visible { outline: 2px solid #1b76d8; outline-offset: 2px; }
+.window-title { color: #4f596e; font-size: 12px; font-weight: 650; margin: 0; }
+.window-bar-spacer { display: block; }
+
+.placeholder-app { align-items: center; display: flex; gap: 22px; height: calc(100% - 39px); justify-content: center; padding: 36px; text-align: left; }
+.placeholder-icon { align-items: center; background: linear-gradient(145deg, #d5e5ff, #9ab9ee); border-radius: 22px; box-shadow: 0 8px 22px rgb(52 95 157 / .22); color: #224e86; display: flex; font-size: 40px; height: 88px; justify-content: center; width: 88px; }
+.placeholder-app h2 { font-size: 21px; letter-spacing: -.025em; margin: 0 0 5px; }
+.placeholder-app p { color: #69748b; font-size: 14px; margin: 0 0 17px; }
+.placeholder-app small { color: #8b95a7; font-size: 12px; }
+
+.resize-handle { bottom: 0; cursor: nwse-resize; height: 22px; position: absolute; right: 0; width: 22px; }
+.resize-handle::after { border-bottom: 2px solid #a8b0be; border-right: 2px solid #a8b0be; bottom: 5px; content: ""; height: 6px; position: absolute; right: 5px; width: 6px; }
+
+@media (max-width: 660px) {
+  .window { height: min(440px, calc(100vh - 115px)); left: 12px !important; top: 32px !important; width: calc(100vw - 24px) !important; }
+}

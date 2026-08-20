@@ -119,12 +119,14 @@ body {
   display: block;
   height: 4px;
   left: calc(50% - 2px);
-  opacity: .72;
+  opacity: 0;
   position: absolute;
   width: 4px;
 }
 
-.finder span { background: linear-gradient(135deg, #67b8ee 0 48%, #367fc3 49%); }
+.dock-app.is-running b { opacity: .72; }
+
+finder span { background: linear-gradient(135deg, #67b8ee 0 48%, #367fc3 49%); }
 .notes span { background: linear-gradient(145deg, #f9df82, #d9a44c); color: #704313; font-size: 31px; }
 .terminal span { background: linear-gradient(145deg, #4d5363, #222632); font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 20px; }
 .camera span { background: linear-gradient(145deg, #c991e9, #694da0); }

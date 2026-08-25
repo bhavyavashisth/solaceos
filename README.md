@@ -4,3 +4,4 @@ Added icons, liquid glass effect
 Added app icons
 Added draggable 
 added Mac like closing buttons
+added new apps
